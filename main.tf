@@ -35,7 +35,6 @@ resource "qovery_database" "my_database" {
 resource "qovery_application" "my_backend" {
   environment_id = qovery_environment.production.id
   name           = "My Backend"
-  description    = "My Backend Application - GitOps repository: https://github.com/evoxmusic/qovery-gitops"
   cpu            = 250
   memory         = 128
   git_repository = {
