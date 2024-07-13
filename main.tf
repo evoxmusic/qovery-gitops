@@ -112,7 +112,7 @@ resource "qovery_application" "my_backend" {
 resource "qovery_deployment" "my_deployment" {
   environment_id = qovery_environment.production.id
   desired_state  = "RUNNING"
-  version        = "a0282bb4-f5bb-44ed-882d-e067f92d106e"
+  version        = "a0282bb4-f5bb-44ed-882d-e067f92d106f"
 
   depends_on = [
     qovery_application.my_backend,
