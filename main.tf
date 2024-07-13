@@ -35,8 +35,8 @@ resource "qovery_database" "my_database" {
 resource "qovery_application" "my_backend" {
   environment_id = qovery_environment.production.id
   name           = "My Backend"
-  cpu            = 250
-  memory         = 128
+  cpu            = 300
+  memory         = 256
   git_repository = {
     url       = "https://github.com/evoxmusic/ShortMe-URL-Shortener.git"
     branch    = "main"
@@ -99,6 +99,10 @@ resource "qovery_application" "my_backend" {
     {
       key   = "DATABASE_NAME"
       value = "postgres"
+    },
+    {
+      key   = "DEBUG_APP"
+      value = "true"
     },
   ]
   secrets = [
